@@ -6,7 +6,7 @@ public class NextLargestNumberBinarySearch {
 		if (low <= high) {
 			int mid = (low + high) / 2;
 			if (array[mid] == n) {
-				return mid;
+				return nextLargestNumberBinarySearch(array, n+1, 11, low, high);
 			} else if (array[mid] > n) {
 				return nextLargestNumberBinarySearch(array, n, 11, low, mid - 1);
 			} else {
@@ -27,8 +27,8 @@ public class NextLargestNumberBinarySearch {
 		array[2] = 13;
 		array[3] = 19;
 		array[4] = 22;
-		array[5] = 41;
-		array[6] = 55;
+		array[5] = 68;
+		array[6] = 68;
 		array[7] = 68;
 		array[8] = 68;
 		array[9] = 81;
